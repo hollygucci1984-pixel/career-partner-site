@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>堀口祐一｜国家資格キャリアコンサルタント — 社外キャリアパートナー・キャリアコーチング</title>
+<meta name="description" content="国家資格キャリアコンサルタント 堀口祐一。福岡県福津市を拠点に、中小企業向け「社外キャリアパートナー」と個人向けキャリアコーチング「こころの伴走者」を提供しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#2E4B3F;
+  --sage:#7A9B84;
+  --sage-light:#B9CBBE;
+  --beige:#F3EEE4;
+  --sand:#E6DDCB;
+  --paper:#FDFCF8;
+  --ink:#2B332E;
+  --ink-soft:#5A665E;
+  --serif:"Shippori Mincho", serif;
+  --gothic:"Zen Kaku Gothic New", sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--gothic);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.9;
+  font-size:16px;
+  letter-spacing:0.03em;
+}
+img{max-width:100%;}
+a{color:inherit;}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,252,248,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--sand);
+}
+.header-inner{
+  max-width:1080px;margin:0 auto;
+  padding:14px 24px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.brand{
+  font-family:var(--serif);
+  font-size:1.02rem;font-weight:600;
+  color:var(--forest);
+  text-decoration:none;
+  line-height:1.4;
+}
+.brand small{
+  display:block;font-family:var(--gothic);
+  font-size:0.68rem;font-weight:400;color:var(--ink-soft);
+  letter-spacing:0.12em;
+}
+.global-nav{display:flex;gap:22px;}
+.global-nav a{
+  font-size:0.82rem;text-decoration:none;color:var(--ink-soft);
+  letter-spacing:0.08em;
+  transition:color .25s;
+}
+.global-nav a:hover,.global-nav a:focus-visible{color:var(--forest);}
+.global-nav a:focus-visible{outline:2px solid var(--sage);outline-offset:3px;}
+@media(max-width:720px){.global-nav{display:none;}}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  background:linear-gradient(180deg,var(--paper) 0%,var(--beige) 100%);
+  overflow:hidden;
+}
+.hero-inner{
+  max-width:1080px;margin:0 auto;
+  padding:88px 24px 96px;
+  display:flex;justify-content:space-between;align-items:stretch;gap:40px;
+  min-height:540px;
+}
+.hero-copy{max-width:520px;display:flex;flex-direction:column;justify-content:center;}
+.hero-eyebrow{
+  font-size:0.78rem;letter-spacing:0.24em;color:var(--sage);
+  margin-bottom:22px;font-weight:500;
+}
+.hero-lead{
+  font-size:1.02rem;color:var(--ink-soft);
+  margin-bottom:34px;
+}
+.hero-lead strong{color:var(--forest);font-weight:700;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;
+  padding:13px 30px;border-radius:999px;
+  font-size:0.9rem;font-weight:700;letter-spacing:0.06em;
+  text-decoration:none;transition:opacity .25s,transform .25s;
+}
+.btn:focus-visible{outline:2px solid var(--forest);outline-offset:3px;}
+.btn-primary{background:var(--forest);color:var(--paper);}
+.btn-primary:hover{opacity:0.88;transform:translateY(-1px);}
+.btn-ghost{border:1.5px solid var(--forest);color:var(--forest);}
+.btn-ghost:hover{background:var(--forest);color:var(--paper);}
+/* 縦書きの主題 */
+.hero-vertical{
+  writing-mode:vertical-rl;
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:clamp(1.9rem,4.2vw,3rem);
+  color:var(--forest);
+  line-height:2.1;
+  letter-spacing:0.18em;
+  padding:12px 0;
+  border-right:1px solid var(--sage-light);
+  padding-right:28px;
+  height:fit-content;
+  max-height:440px;
+  align-self:center;
+  flex-shrink:0;
+}
+.hero-vertical span{color:var(--sage);}
+.hero-seed{
+  position:absolute;bottom:-60px;left:-60px;
+  width:280px;height:280px;border-radius:50%;
+  border:1px solid var(--sage-light);opacity:0.5;
+}
+.hero-seed::after{
+  content:"";position:absolute;inset:40px;
+  border-radius:50%;border:1px solid var(--sage-light);
+}
+@media(max-width:820px){
+  .hero-inner{flex-direction:column-reverse;padding:64px 24px 72px;min-height:auto;gap:36px;}
+  .hero-vertical{
+    writing-mode:horizontal-tb;
+    align-self:flex-start;
+    font-size:1.6rem;
+    max-height:none;
+    border-right:none;
+    border-left:3px solid var(--sage);
+    padding:4px 0 4px 18px;
+    line-height:1.9;
+  }
+}
+
+/* ---------- 共通セクション ---------- */
+section{padding:88px 24px;}
+.section-inner{max-width:1080px;margin:0 auto;}
+.section-label{
+  font-size:0.76rem;letter-spacing:0.26em;color:var(--sage);
+  font-weight:700;margin-bottom:14px;
+}
+.section-title{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(1.5rem,3vw,2rem);
+  color:var(--forest);line-height:1.6;
+  margin-bottom:28px;
+}
+.section-note{color:var(--ink-soft);max-width:640px;}
+
+/* ---------- 二つの道 ---------- */
+.two-paths{background:var(--paper);}
+.path-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;
+}
+@media(max-width:760px){.path-grid{grid-template-columns:1fr;}}
+.path-card{
+  background:var(--beige);
+  border-radius:18px;
+  padding:40px 34px;
+  display:flex;flex-direction:column;gap:16px;
+  border:1px solid var(--sand);
+  transition:transform .3s,box-shadow .3s;
+}
+.path-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(46,75,63,0.10);}
+.path-tag{
+  align-self:flex-start;
+  background:var(--forest);color:var(--paper);
+  font-size:0.72rem;letter-spacing:0.14em;font-weight:700;
+  padding:5px 14px;border-radius:999px;
+}
+.path-card.personal .path-tag{background:var(--sage);}
+.path-card h3{
+  font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--forest);
+  line-height:1.6;
+}
+.path-copy{
+  font-family:var(--serif);
+  color:var(--forest);font-size:1.02rem;
+}
+.path-desc{font-size:0.92rem;color:var(--ink-soft);}
+.path-link{
+  margin-top:auto;
+  font-size:0.88rem;font-weight:700;color:var(--forest);
+  text-decoration:none;letter-spacing:0.06em;
+}
+.path-link::after{content:" →";}
+.path-link:hover{text-decoration:underline;}
+
+/* ---------- 社外キャリアパートナー ---------- */
+.corp{background:var(--forest);color:var(--beige);}
+.corp .section-label{color:var(--sage-light);}
+.corp .section-title{color:var(--paper);}
+.corp-message{
+  font-family:var(--serif);
+  font-size:clamp(1.25rem,2.6vw,1.7rem);
+  color:var(--paper);
+  border-left:3px solid var(--sage-light);
+  padding-left:22px;
+  margin:36px 0 14px;
+  line-height:2;
+}
+.corp-sub{color:var(--sage-light);font-size:0.92rem;margin-bottom:48px;max-width:620px;}
+.corp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:52px;}
+@media(max-width:820px){.corp-grid{grid-template-columns:1fr;}}
+.corp-item{
+  background:rgba(253,252,248,0.06);
+  border:1px solid rgba(185,203,190,0.3);
+  border-radius:14px;padding:28px 24px;
+}
+.corp-item h4{
+  font-family:var(--serif);font-size:1.05rem;font-weight:600;
+  color:var(--paper);margin-bottom:10px;line-height:1.6;
+}
+.corp-item p{font-size:0.88rem;color:var(--sage-light);}
+.corp-stance{
+  background:var(--beige);color:var(--ink);
+  border-radius:16px;padding:36px 34px;
+  max-width:760px;
+}
+.corp-stance h4{
+  font-family:var(--serif);color:var(--forest);
+  font-size:1.1rem;margin-bottom:12px;
+}
+.corp-stance p{font-size:0.94rem;color:var(--ink-soft);}
+.corp-stance p + p{margin-top:10px;}
+.corp-meta{
+  margin-top:34px;font-size:0.82rem;color:var(--sage-light);
+  border-top:1px solid rgba(185,203,190,0.3);padding-top:20px;
+  max-width:760px;
+}
+.corp-meta li{list-style:none;padding-left:1.2em;text-indent:-1.2em;margin-bottom:6px;}
+.corp-meta li::before{content:"※ ";}
+
+/* ---------- こころの伴走者 ---------- */
+.personal-sec{background:var(--beige);}
+.states{margin:36px 0 48px;display:grid;gap:14px;max-width:680px;}
+.state{
+  background:var(--paper);border-radius:12px;
+  padding:18px 24px;font-size:0.95rem;color:var(--ink-soft);
+  border-left:3px solid var(--sage);
+}
+.phases{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  margin:20px 0 56px;max-width:860px;
+}
+@media(max-width:720px){.phases{grid-template-columns:1fr;}}
+.phase{
+  padding:32px 28px;
+  border-top:1px solid var(--sage-light);
+  position:relative;
+}
+.phase + .phase{border-left:1px solid var(--sage-light);}
+@media(max-width:720px){.phase + .phase{border-left:none;}}
+.phase-name{
+  font-family:var(--serif);font-size:1.5rem;font-weight:600;
+  color:var(--forest);margin-bottom:10px;
+}
+.phase-name small{font-size:0.7rem;letter-spacing:0.2em;color:var(--sage);display:block;font-family:var(--gothic);font-weight:500;margin-bottom:6px;}
+.phase p{font-size:0.88rem;color:var(--ink-soft);}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media(max-width:820px){.price-grid{grid-template-columns:1fr;}}
+.price-card{
+  background:var(--paper);border-radius:16px;
+  padding:34px 30px;border:1px solid var(--sand);
+  display:flex;flex-direction:column;gap:10px;
+}
+.price-card.featured{border:1.5px solid var(--forest);}
+.price-name{font-size:0.86rem;letter-spacing:0.1em;color:var(--sage);font-weight:700;}
+.price-value{
+  font-family:var(--serif);font-size:1.7rem;color:var(--forest);font-weight:600;
+}
+.price-value small{font-size:0.85rem;color:var(--ink-soft);font-family:var(--gothic);font-weight:400;}
+.price-desc{font-size:0.86rem;color:var(--ink-soft);}
+.price-badge{
+  align-self:flex-start;background:var(--sage);color:var(--paper);
+  font-size:0.7rem;font-weight:700;letter-spacing:0.1em;
+  padding:4px 12px;border-radius:999px;
+}
+
+/* ---------- プロフィール ---------- */
+.profile{background:var(--paper);}
+.profile-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;margin-top:40px;}
+@media(max-width:820px){.profile-grid{grid-template-columns:1fr;gap:36px;}}
+.profile-name{
+  font-family:var(--serif);font-size:1.5rem;color:var(--forest);font-weight:600;
+  margin-bottom:4px;
+}
+.profile-role{font-size:0.85rem;color:var(--sage);letter-spacing:0.1em;margin-bottom:24px;}
+.profile-text p{font-size:0.94rem;color:var(--ink-soft);margin-bottom:14px;}
+.quali-title{
+  font-size:0.78rem;letter-spacing:0.2em;color:var(--sage);font-weight:700;
+  margin-bottom:16px;
+}
+.quali-list{list-style:none;}
+.quali-list li{
+  font-size:0.9rem;padding:12px 0;
+  border-bottom:1px solid var(--sand);
+  color:var(--ink);
+}
+.quali-list li strong{color:var(--forest);}
+.quali-list li small{display:block;font-size:0.76rem;color:var(--ink-soft);}
+
+/* ---------- 流れ ---------- */
+.flow{background:var(--beige);}
+.flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px;}
+@media(max-width:820px){.flow-steps{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.flow-steps{grid-template-columns:1fr;}}
+.flow-step{
+  background:var(--paper);border-radius:14px;padding:28px 24px;
+  border:1px solid var(--sand);
+}
+.flow-num{
+  font-family:var(--serif);font-size:1rem;color:var(--sage);
+  letter-spacing:0.1em;margin-bottom:8px;
+}
+.flow-step h4{font-size:1rem;color:var(--forest);margin-bottom:8px;font-weight:700;}
+.flow-step p{font-size:0.84rem;color:var(--ink-soft);}
+
+/* ---------- CTA ---------- */
+.contact{background:var(--forest);text-align:center;}
+.contact .section-title{color:var(--paper);}
+.contact p{color:var(--sage-light);max-width:560px;margin:0 auto 36px;font-size:0.95rem;}
+.contact .btn-primary{background:var(--paper);color:var(--forest);}
+
+/* ---------- footer ---------- */
+.site-footer{
+  background:var(--forest);
+  border-top:1px solid rgba(185,203,190,0.25);
+  padding:32px 24px;text-align:center;
+}
+.site-footer p{font-size:0.78rem;color:var(--sage-light);letter-spacing:0.08em;}
+.site-footer .foot-name{font-family:var(--serif);font-size:0.92rem;color:var(--paper);margin-bottom:6px;}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+  .path-card,.btn{transition:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top">堀口 祐一
+      <small>国家資格キャリアコンサルタント｜ホリスティックライフコーチ</small>
+    </a>
+    <nav class="global-nav" aria-label="メインナビゲーション">
+      <a href="#corp">企業の方へ</a>
+      <a href="#personal">個人の方へ</a>
+      <a href="#profile">プロフィール</a>
+      <a href="#flow">ご相談の流れ</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ヒーロー -->
+<section class="hero" aria-label="メインビジュアル">
+  <div class="hero-seed" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">CAREER CONSULTING ＆ COACHING</p>
+      <p class="hero-lead">
+        国家資格キャリアコンサルタントとして、<br>
+        <strong>企業ではたらく人</strong>と、<strong>人生の転機に立つ人</strong>のそばに。<br>
+        評価も指導もしない、社外だからこそ話せる場所から、<br>
+        キャリアは静かに動きはじめます。
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">無料相談を申し込む</a>
+        <a class="btn btn-ghost" href="#services">サービスを見る</a>
+      </div>
+    </div>
+    <h1 class="hero-vertical">答えは、いつも<br><span>その人の中に</span>ある。</h1>
+  </div>
+</section>
+
+<!-- 二つの道 -->
+<section class="two-paths" id="services">
+  <div class="section-inner">
+    <p class="section-label reveal">SERVICES</p>
+    <h2 class="section-title reveal">ふたつの入口、ひとつの願い。</h2>
+    <p class="section-note reveal">
+      企業向けと個人向け、入口はふたつあります。けれど根っこにある願いはひとつ——
+      働く一人ひとりが、自分のキャリアを自分の意思で選べるようになることです。
+    </p>
+    <div class="path-grid">
+      <article class="path-card reveal">
+        <span class="path-tag">企業の方へ</span>
+        <h3>社外キャリアパートナー</h3>
+        <p class="path-copy">採用費を増やす前に、<br>辞める理由を減らす。</p>
+        <p class="path-desc">
+          従業員10〜100名の中小企業のための、外部キャリア面談と定着支援。
+          社内では出てこない本音を、社外の専門家が丁寧に聴き、経営に活かせるかたちでお返しします。
+        </p>
+        <a class="path-link" href="service-corp.html">詳しく見る</a>
+      </article>
+      <article class="path-card personal reveal">
+        <span class="path-tag">個人の方へ</span>
+        <h3>キャリアコーチング「こころの伴走者」</h3>
+        <p class="path-copy">がんばり方を変える、<br>その隣を歩きます。</p>
+        <p class="path-desc">
+          転職・退職・役割の変化——人生の転機に立ち止まったとき、
+          自分の内側の声を聴きなおすための、一対一の伴走です。
+        </p>
+        <a class="path-link" href="service-coaching.html">詳しく見る</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 社外キャリアパートナー -->
+<section class="corp" id="corp">
+  <div class="section-inner">
+    <p class="section-label reveal">FOR COMPANIES</p>
+    <h2 class="section-title reveal">社外キャリアパートナー</h2>
+    <p class="corp-message reveal">採用費を増やす前に、<br>辞める理由を減らす。</p>
+    <p class="corp-sub reveal">
+      「採用してもすぐ辞めてしまう」「面談をしても本音が出てこない」「若手のキャリア不安に応えられない」——
+      その背景には、社内では言えない声があります。社外の国家資格キャリアコンサルタントだからこそ聴ける声を、組織の力に変えていきます。
+    </p>
+    <div class="corp-grid">
+      <div class="corp-item reveal">
+        <h4>社外キャリア面談</h4>
+        <p>守秘を前提とした一対一の面談。評価者ではない第三者だから、従業員は安心して本音を話せます。</p>
+      </div>
+      <div class="corp-item reveal">
+        <h4>離職要因の可視化・月次レポート</h4>
+        <p>面談から見えてきた傾向を、個人が特定されないかたちで整理し、経営判断に使えるレポートとしてお届けします。</p>
+      </div>
+      <div class="corp-item reveal">
+        <h4>経営者への改善提案</h4>
+        <p>「辞める理由」を減らすための具体策を、現場の声にもとづいてご提案。小さく始めて、確かめながら進めます。</p>
+      </div>
+    </div>
+    <div class="corp-stance reveal">
+      <h4>大切にしている前提</h4>
+      <p>
+        私の目的は「従業員を辞めさせないこと」ではありません。働く一人ひとりが自分のキャリアを主体的に考え、
+        納得して選べるようになること——それが目的です。
+      </p>
+      <p>
+        「この会社で働き続けたい」と自分で選んだ人は、簡単には辞めません。定着率の向上は、目的ではなく、結果としてついてくるものだと考えています。
+      </p>
+    </div>
+    <ul class="corp-meta reveal">
+      <li>対象：福津市・宗像市を中心とした福岡県内の中小企業（従業員10〜100名規模／製造・介護・建設業など）</li>
+      <li>人材開発支援助成金・セルフ・キャリアドック等の活用は、提携社会保険労務士と連携のうえご案内します（適用を保証するものではありません）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- こころの伴走者 -->
+<section class="personal-sec" id="personal">
+  <div class="section-inner">
+    <p class="section-label reveal">FOR INDIVIDUALS</p>
+    <h2 class="section-title reveal">キャリアコーチング「こころの伴走者」</h2>
+    <p class="section-note reveal">
+      年齢や職種ではなく、「いま、どんな状態にいるか」を大切にしています。
+      たとえば、こんなとき——
+    </p>
+    <div class="states">
+      <p class="state reveal">ずっと「支える側」として生きてきて、ふと、自分の番はいつ来るのだろうと思った。</p>
+      <p class="state reveal">転職や退職、役割の変化を前に、立ち止まっている。動きたいのに、動けない。</p>
+      <p class="state reveal">がんばることはできる。でも、なぜか満たされない。がんばり方を変えたい。</p>
+    </div>
+
+    <h3 class="section-title reveal" style="font-size:1.3rem;">セッションで歩む、三つの段階</h3>
+    <div class="phases">
+      <div class="phase reveal">
+        <p class="phase-name"><small>PHASE 01</small>気づく</p>
+        <p>いま感じていることを、そのまま言葉にしていきます。評価もアドバイスもしません。ただ丁寧に聴くことから、自分でも気づいていなかった声が現れます。</p>
+      </div>
+      <div class="phase reveal">
+        <p class="phase-name"><small>PHASE 02</small>ほどく</p>
+        <p>「こうあるべき」「がんばらなければ」——長年まとってきた思い込みを、ひとつずつ、やさしくほどいていきます。</p>
+      </div>
+      <div class="phase reveal">
+        <p class="phase-name"><small>PHASE 03</small>還る</p>
+        <p>本来の自分の感覚に還り、そこから次の一歩を選びます。答えを渡すのではなく、あなた自身の答えが立ち上がるのを待ちます。</p>
+      </div>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <p class="price-name">無料オリエンテーション</p>
+        <p class="price-value">¥0<small>／30分</small></p>
+        <p class="price-desc">はじめての方向け。いまの状態をお聴きし、伴走の進め方をご説明します。相性を確かめる時間としてお使いください。</p>
+      </div>
+      <div class="price-card reveal">
+        <p class="price-name">単発セッション</p>
+        <p class="price-value">¥10,000<small>／60分</small></p>
+        <p class="price-desc">いま向き合いたいテーマがある方に。一回完結で、丁寧に聴き、整理する時間です。</p>
+      </div>
+      <div class="price-card featured reveal">
+        <span class="price-badge">モニター ¥50,000（先着3名）</span>
+        <p class="price-name">90日伴走プログラム</p>
+        <p class="price-value">¥100,000<small>／90日</small></p>
+        <p class="price-desc">隔週セッション＋期間中のメッセージ相談。「気づく→ほどく→還る」を、時間をかけて深く歩みます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- プロフィール -->
+<section class="profile" id="profile">
+  <div class="section-inner">
+    <p class="section-label reveal">PROFILE</p>
+    <h2 class="section-title reveal">伴走する人</h2>
+    <div class="profile-grid">
+      <div class="profile-text reveal">
+        <p class="profile-name">堀口 祐一</p>
+        <p class="profile-role">国家資格キャリアコンサルタント｜ホリスティックライフコーチ</p>
+        <p>
+          大手メーカーで約10年、製造の現場に携わったのち、心身の不調をきっかけに退職。
+          働くことと生きることを見つめなおす時間を経て、心理学・カウンセリング・東洋思想を学び、
+          神社での奉職も経験しました。
+        </p>
+        <p>
+          遠回りに見えたこの道のりが、いまの仕事の土台になっています。
+          「順調なキャリア」から外れた人の気持ちも、「このままでいいのか」と立ち止まる気持ちも、
+          自分ごととして知っているからです。
+        </p>
+        <p>
+          福岡県福津市を拠点に、企業と個人の両方に向けたキャリア支援を行っています。
+          ライフワークは「やさしい世界の種まき」。
+        </p>
+      </div>
+      <div class="reveal">
+        <p class="quali-title">QUALIFICATIONS｜保有資格</p>
+        <ul class="quali-list">
+          <li><strong>国家資格キャリアコンサルタント</strong><small>2026年登録</small></li>
+          <li>ホリスティックライフコーチ<small>アラン・コーエン認定</small></li>
+          <li>NLPプラクティショナー</li>
+          <li>上級心理カウンセラー</li>
+          <li>直傳靈氣</li>
+          <li>色彩心理カウンセラー・インストラクター</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 流れ -->
+<section class="flow" id="flow">
+  <div class="section-inner">
+    <p class="section-label reveal">FLOW</p>
+    <h2 class="section-title reveal">ご相談の流れ</h2>
+    <div class="flow-steps">
+      <div class="flow-step reveal">
+        <p class="flow-num">STEP 1</p>
+        <h4>お問い合わせ</h4>
+        <p>フォームまたはメールからご連絡ください。企業・個人どちらの窓口も同じです。</p>
+      </div>
+      <div class="flow-step reveal">
+        <p class="flow-num">STEP 2</p>
+        <h4>無料相談（30分）</h4>
+        <p>いまの状況とお困りごとをお聴きします。オンライン・対面どちらも可能です。</p>
+      </div>
+      <div class="flow-step reveal">
+        <p class="flow-num">STEP 3</p>
+        <h4>ご提案</h4>
+        <p>お聴きした内容をもとに、進め方と費用をご提案します。無理な勧誘はいたしません。</p>
+      </div>
+      <div class="flow-step reveal">
+        <p class="flow-num">STEP 4</p>
+        <h4>伴走の開始</h4>
+        <p>ご納得いただけたら、伴走が始まります。始めたあとの変更・中止もいつでもご相談ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <h2 class="section-title reveal">まずは、話すことから。</h2>
+    <p class="reveal">
+      うまく整理できていなくても大丈夫です。「なんとなく気になった」——
+      その感覚だけで、じゅうぶんな理由になります。30分の無料相談で、お待ちしています。
+    </p>
+    <a class="btn btn-primary reveal" href="mailto:contact@example.com?subject=無料相談の申し込み">無料相談を申し込む</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="foot-name">堀口 祐一｜ホリスティックライフコーチ</p>
+  <p>国家資格キャリアコンサルタント　福岡県福津市</p>
+  <p>© 2026 Yuichi Horiguchi</p>
+</footer>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if(reduced || !('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('visible');});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+    });
+  },{threshold:0.12});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+
+</body>
+</html>
