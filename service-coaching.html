@@ -135,7 +135,11 @@ section{padding:80px 24px;}
 .price-name{font-size:0.86rem;letter-spacing:0.1em;color:var(--sage);font-weight:700;}
 .price-value{font-family:var(--serif);font-size:1.7rem;color:var(--forest);font-weight:600;}
 .price-value small{font-size:0.85rem;color:var(--ink-soft);font-family:var(--gothic);font-weight:400;}
-.price-original{text-decoration:line-through;color:var(--ink-soft);font-size:1.05rem;font-weight:400;margin-right:8px;}
+.price-original{
+  font-family:var(--gothic);font-size:0.82rem;font-weight:400;
+  color:var(--ink-soft);text-decoration:line-through;
+  display:block;margin-bottom:2px;
+}
 .price-desc{font-size:0.86rem;color:var(--ink-soft);}
 .price-badge{
   align-self:flex-start;background:var(--sage);color:var(--paper);
@@ -331,8 +335,8 @@ section{padding:80px 24px;}
     <h2 class="section-title reveal">メニューと料金</h2>
     <div class="price-grid">
       <div class="price-card reveal">
-        <p class="price-name">無料相談</p>
-        <p class="price-value">¥0<small>／60分</small></p>
+        <p class="price-name">無料オリエンテーション</p>
+        <p class="price-value">¥0<small>／30分</small></p>
         <p class="price-desc">はじめての方向け。いまの状態をお聴きし、伴走の進め方をご説明します。</p>
         <ul>
           <li>オンライン</li>
@@ -341,9 +345,8 @@ section{padding:80px 24px;}
         </ul>
       </div>
       <div class="price-card reveal">
-        <span class="price-badge">モニター価格</span>
         <p class="price-name">単発セッション</p>
-        <p class="price-value"><span class="price-original">¥5,000</span>¥3,000<small>／60分</small></p>
+        <p class="price-value">¥15,000<small>／60分</small></p>
         <p class="price-desc">いま向き合いたいテーマがある方に。一回完結で、丁寧に聴き、整理する時間です。</p>
         <ul>
           <li>60分×1回</li>
@@ -352,12 +355,12 @@ section{padding:80px 24px;}
         </ul>
       </div>
       <div class="price-card featured reveal">
-        <span class="price-badge">モニター価格（先着3名）</span>
+        <span class="price-badge">期間限定価格</span>
         <p class="price-name">90日伴走プログラム</p>
-        <p class="price-value"><span class="price-original">¥60,000</span>¥40,000<small>／90日</small></p>
+        <p class="price-value"><span class="price-original">通常 ¥300,000</span>¥150,000<small>／90日</small></p>
         <p class="price-desc">「気づく→ほどく→還る」を、時間をかけて深く歩む3ヶ月間です。</p>
         <ul>
-          <li>セッション60分×6回（隔週）</li>
+          <li>セッション60分×12回（週1）</li>
           <li>期間中のメッセージ相談（回数無制限）</li>
           <li>内省ワークブックつき</li>
         </ul>
@@ -419,12 +422,12 @@ section{padding:80px 24px;}
 <!-- CTA -->
 <section class="contact">
   <div class="section-inner">
-    <h2 class="section-title reveal">まずは、60分だけ話してみませんか。</h2>
+    <h2 class="section-title reveal">まずは、30分だけ話してみませんか。</h2>
     <p class="reveal">
       うまく話せなくても大丈夫です。「なんとなく気になった」——
       その感覚だけで、じゅうぶんな理由になります。
     </p>
-    <a class="btn btn-light reveal" href="mailto:contact@example.com?subject=こころの伴走者 無料相談の申し込み">無料相談を申し込む</a>
+    <a class="btn btn-light reveal" href="mailto:contact@example.com?subject=こころの伴走者 無料オリエンテーションの申し込み">無料オリエンテーションを申し込む</a>
   </div>
 </section>
 
